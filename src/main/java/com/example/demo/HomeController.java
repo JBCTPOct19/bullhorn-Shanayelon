@@ -17,7 +17,7 @@ public class HomeController {
 
     @RequestMapping("/")
     public String listMessages(Model model) {
-        model.addAttribute("Message", messageRepository.findAll());
+        model.addAttribute("message_list", messageRepository.findAll());
         return "messagelist";
     }
 

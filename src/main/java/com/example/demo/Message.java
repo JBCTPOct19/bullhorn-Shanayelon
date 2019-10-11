@@ -15,7 +15,7 @@ public class Message {
     private long id;
     @NotNull
     @Size(min=1)
-    private String Date;
+    private String date;
     @NotNull
     @Size(min=1)
     private String content;
@@ -32,11 +32,11 @@ public class Message {
     }
 
     public String getDate() {
-        return Date;
+        return date;
     }
 
     public void setDate(String date) {
-        Date = date;
+        date = date;
     }
 
     public String getContent() {

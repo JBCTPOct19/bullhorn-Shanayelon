@@ -1,15 +1,34 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://wwwthymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+<meta charset="utf-8" />
+<meta http-equip="X-UA-Compatible" content="IE=edge" />
+<title>Shanay Bullhorn</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
 </head>
 <body>
+<div class="container">
+    <div class="jumbotron">
+        <h1>Hello Java, This is Shanay</h1><p>...I said Shanay</p>
+        </p><a class="btn btn-primary btn-lg" href="#" role="Button"> Learn more</a>
+        </p>
+    </div>
+</div>
+
+
 <h1>Message Form</h1>
 <a href="/add">Add a Message</a><br />
-<div th:each="message : ${Message}">
-    <h4 th:inline="text"> [[${message.date}]] @[[${message.content}]]</h4>
+<div th:each="message : ${message_list}">
+    <h4 th:inline="text">[[${message.date}]] @[[${message.content}]]</h4>
     <p th:text="${message.sentby}"></p>
 </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
