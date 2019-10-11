@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Message Form</h1>
+<form action="#" th:action="@{/process}" th:object="${message}" method="post">
+    Date :<input type="number" th:field="*{date}" />
+    <span th:if="${#fields.hasErrors('date')}"
+          th:errors="*{date}"></span><br />
+    Content :<input type="text" th:field="*{Content}" />
+    <span th:if="${#fields.hasErrors('Content')}"
+          th:errors="*{Content}"></span><br />
+sentby :<textarea rows="3" th:field="*{sentby}" />
+    <span th:if="${#fields.hasErrors('sentby')}"
+          th:errors="*{sentby}"></span>
+    <br />
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>
