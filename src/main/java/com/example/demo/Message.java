@@ -14,13 +14,13 @@ public class Message {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
     @NotNull
-    @Size(min=7)
+    @Size(min=1)
     private String Date;
     @NotNull
-    @Size(min=5)
+    @Size(min=1)
     private String content;
     @NotNull
-    @Size(min=15)
+    @Size(min=1)
     private String sentby;
 
     public long getId() {

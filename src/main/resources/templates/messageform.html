@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -10,9 +10,9 @@
     Date :<input type="number" th:field="*{date}" />
     <span th:if="${#fields.hasErrors('date')}"
           th:errors="*{date}"></span><br />
-    Content :<input type="text" th:field="*{Content}" />
-    <span th:if="${#fields.hasErrors('Content')}"
-          th:errors="*{Content}"></span><br />
+    Content :<input type="text" th:field="*{content}" />
+    <span th:if="${#fields.hasErrors('content')}"
+          th:errors="*{content}"></span><br />
 sentby :<textarea rows="3" th:field="*{sentby}" />
     <span th:if="${#fields.hasErrors('sentby')}"
           th:errors="*{sentby}"></span>
